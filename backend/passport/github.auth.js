@@ -24,7 +24,8 @@ passport.use(
       clientSecret: process.env.GITHUB_CLIENT_SECRET,
       // callbackURL: "https://mern-github-app.onrender.com/api/auth/github/callback",
       // callbackURL: "http://localhost:5173/api/auth/github/callback",
-      callbackURL: "/api/auth/github/callback",
+      // callbackURL: "/api/auth/github/callback",
+      callbackURL: "https://gitapp-jxl4.onrender.com/api/auth/github/callback",
     },
     async function (accessToken, refreshToken, profile, done) {
       const user = await User.findOne({ username: profile.username });
